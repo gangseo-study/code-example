@@ -3,7 +3,9 @@ package study.service;
 import study.dao.UserDao;
 import study.vo.UserVO;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class UserService {
 
@@ -21,16 +23,13 @@ public class UserService {
 
     public List<UserVO> readUserByAge(int age) {
         List<UserVO> result = userDao.findByAge(age);
-        result.forEach(r -> System.out.println(r));
+        result.forEach(System.out::println);
         return result;
     }
 
-    public List<UserVO> readUserAll() {
-        List<UserVO> result = userDao.findAll();
-        result.sort((o1, o2) -> {
-            if (o1.getEmail().length() > o2.getEmail().length()) return -1;
-            return o1.getEmail().length() < o2.getEmail().length() ? 1 : 0;
-        });
+    public List<UserVO> readUserAllOrderByEmailLength() {
+        List<UserVO> result = userDao.findAll().stream().sorted(Comparator.comparing(r -> r.getEmail().length())).collect(Collectors.toList());
+
         result.forEach(r -> System.out.println(r));
         return result;
     }

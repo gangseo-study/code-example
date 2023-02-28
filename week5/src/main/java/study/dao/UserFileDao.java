@@ -16,7 +16,7 @@ public class UserFileDao implements UserDao{
 
     @Override
     public List<UserVO> findAll() {
-        return new ArrayList<UserVO>(dataMap.values());
+        return new ArrayList<>(dataMap.values());
     }
 
     @Override

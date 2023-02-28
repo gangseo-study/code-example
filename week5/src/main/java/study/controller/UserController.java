@@ -25,7 +25,7 @@ public class UserController {
     }
 
     public Object readUserAll() {
-        return userService.readUserAll();
+        return userService.readUserAllOrderByEmailLength();
     }
 
     public Object sumAgeByEmailContains(String email) {
