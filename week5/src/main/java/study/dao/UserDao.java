@@ -1,6 +1,6 @@
-package study.dao;
+package study.dao.user;
 
-import study.vo.UserVO;
+import study.vo.user.UserVO;
 
 import java.util.List;
 

@@ -1,10 +1,12 @@
-package study.service;
+package study.service.user;
 
-import study.dao.UserDao;
-import study.vo.UserVO;
+import org.springframework.stereotype.Service;
+import study.dao.user.UserDao;
+import study.vo.user.UserVO;
 
 import java.util.List;
 
+@Service
 public class UserService {
 
     UserDao userDao;
@@ -26,13 +28,7 @@ public class UserService {
     }
 
     public List<UserVO> readUserAll() {
-        List<UserVO> result = userDao.findAll();
-        result.sort((o1, o2) -> {
-            if (o1.getEmail().length() > o2.getEmail().length()) return -1;
-            return o1.getEmail().length() < o2.getEmail().length() ? 1 : 0;
-        });
-        result.forEach(r -> System.out.println(r));
-        return result;
+        return userDao.findAll();
     }
 
     public Object sumAgeByEmailContains(String email) {
