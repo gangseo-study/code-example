@@ -1,9 +1,9 @@
-package study.service.login;
+package study.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import study.helper.LogonList;
-import study.service.user.UserService;
+import study.model.UserVO;
 
 import java.util.List;
 
@@ -15,12 +15,16 @@ public class LoginService {
     private final UserService userService;
 
     public List<String> login(String name) {
-        logonList.add(userService.readUserByName(name));
+        UserVO user = userService.readUserByName(name);
+        if (user == null) throw new NullPointerException("user: " + name + " is not found");
+        logonList.add(user);
         return logonList.getList();
     }
 
     public List<String> logout(String name) {
-        logonList.subtract(userService.readUserByName(name));
+        UserVO user = userService.readUserByName(name);
+        if (user == null) throw new NullPointerException("user: " + name + " is not found");
+        logonList.subtract(user);
         return logonList.getList();
     }
 }

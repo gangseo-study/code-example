@@ -1,27 +1,27 @@
 package study.helper;
 
-import io.swagger.annotations.Scope;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
+import study.model.UserVO;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
-@Scope(name = "waitingQueue", description = "waiting line")
 @Component
-public class WaitingQueue {
+public class LogonList {
+    private final List<UserVO> list = new ArrayList<>();
 
-    private final Queue<String> userNameQueue = new LinkedList<>();
-
-    public void add(String name) {
-        userNameQueue.add(name);
+    public void add(UserVO user) {
+        list.add(user);
     }
 
-    public void printQueue() {
-        userNameQueue.forEach(System.out::println);
+    public void subtract(UserVO user) {
+        list.remove(user);
     }
 
-    public String getQueue() {
-        return userNameQueue.toString();
+    public List<String> getList() {
+        System.out.println("list: " +list);
+        return list.stream().map(UserVO::getName).collect(Collectors.toList());
     }
+
 }

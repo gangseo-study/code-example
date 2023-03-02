@@ -1,4 +1,4 @@
-package study.vo;
+package study.model;
 
 import lombok.*;
 
@@ -40,6 +40,10 @@ public class UserVO {
 
     public String getEmail() {
         return email;
+    }
+
+    public UserDTO toDTO() {
+        return new UserDTO(this.getName(), this.getAge(), this.getPhone(), this.getEmail());
     }
 
     @Override

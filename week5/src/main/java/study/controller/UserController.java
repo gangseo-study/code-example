@@ -1,16 +1,14 @@
-package study.controller.user;
+package study.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import study.service.user.UserService;
-import study.vo.user.UserVO;
+import org.springframework.web.bind.annotation.*;
+import study.model.UserDTO;
+import study.service.UserService;
+import study.model.UserVO;
 
 import java.util.List;
 
@@ -35,14 +33,20 @@ public class UserController {
     //        this.userService = userService;
     //    }
 
+    @GetMapping("/all")
+    @ApiOperation(value = "none", response = UserVO.class)
+    public ResponseEntity<List<UserVO>> readUserAll() {
+        return new ResponseEntity<>(userService.readUserAll(), HttpStatus.OK);
+    }
+
     @GetMapping("/read/{name}")
     public ResponseEntity<UserVO> readUserByName(@PathVariable String name) {
         return new ResponseEntity<>(userService.readUserByName(name), HttpStatus.OK);
     }
 
-    @GetMapping("/all")
-    @ApiOperation(value = "none", response = UserVO.class)
-    public ResponseEntity<List<UserVO>> readUserAll() {
-        return new ResponseEntity<>(userService.readUserAll(), HttpStatus.OK);
+    @PostMapping("/insert")
+    public ResponseEntity<UserDTO> insertUser(@RequestBody UserDTO dto) throws Exception {
+        UserDTO user = userService.insertUser(dto);
+        return new ResponseEntity<>(user, HttpStatus.OK);
     }
 }

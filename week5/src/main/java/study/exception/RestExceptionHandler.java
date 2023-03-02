@@ -1,4 +1,4 @@
-package study.config;
+package study.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,16 +16,24 @@ public class RestExceptionHandler {
     /**
      * - @ExceptionHandler: @ExceptionHandler 어노테이션이 달린 클래스 내에서 예외가 발생했을 때 처리할 핸들러를 정의한다.
      */
-    @ExceptionHandler({NullPointerException.class})
-    public ResponseEntity<String> handleNullPointerException(Exception e) {
-        System.out.println("null");
+    @ExceptionHandler({IllegalArgumentException.class})
+    public ResponseEntity<ExceptionResponse> handleIllegalArgumentException(Exception e) {
         e.printStackTrace();
-        return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(ExceptionResponse.builder().message(e.getMessage()).exceptionType("ARGS").build(),
+                HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler({NullPointerException.class})
+    public ResponseEntity<ExceptionResponse> handleNullPointerException(Exception e) {
+        e.printStackTrace();
+        return new ResponseEntity<>(ExceptionResponse.builder().message(e.getMessage()).exceptionType("NULL").build(),
+                HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler({RuntimeException.class})
-    public ResponseEntity<String> handleException(Exception e) {
+    public ResponseEntity<ExceptionResponse> handleException(Exception e) {
         e.printStackTrace();
-        return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(ExceptionResponse.builder().message(e.getMessage()).exceptionType("RUNTIME").build(),
+                HttpStatus.BAD_REQUEST);
     }
 }
