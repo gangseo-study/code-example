@@ -7,6 +7,10 @@ import study.model.UserVO;
 
 import java.util.List;
 
+
+/**
+ * 1. @RequiredArgsConstructor: @Notnull이나 final이 붙은 필드의 생성자를 자동으로 생성한다.
+ */
 @Service
 @RequiredArgsConstructor
 public class LoginService {

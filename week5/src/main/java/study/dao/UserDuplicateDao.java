@@ -36,4 +36,14 @@ public class UserDuplicateDao implements UserDao{
     public UserDTO insertUser(UserVO toVO) {
         return null;
     }
+
+    @Override
+    public String deleteUser(String name) throws Exception {
+        return null;
+    }
+
+    @Override
+    public UserDTO updateUser(UserVO dto) throws Exception {
+        return null;
+    }
 }

@@ -49,4 +49,16 @@ public class UserController {
         UserDTO user = userService.insertUser(dto);
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
+
+    @DeleteMapping("/delete/{name}")
+    public ResponseEntity<String> deleteUser(@PathVariable String name) throws Exception {
+        String user = userService.deleteUser(name);
+        return new ResponseEntity<>(user, HttpStatus.OK);
+    }
+
+    @PutMapping("/update")
+    public ResponseEntity<UserDTO> updateUser(@RequestBody UserDTO dto) throws Exception {
+        UserDTO user = userService.updateUser(dto);
+        return new ResponseEntity<>(user, HttpStatus.OK);
+    }
 }

@@ -8,7 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserDTO {
-    private String name;
+    @NonNull private String name;
     private int age;
     private String phone;
     private String email;

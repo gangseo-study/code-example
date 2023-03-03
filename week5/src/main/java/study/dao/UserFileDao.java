@@ -1,21 +1,21 @@
 package study.dao;
 
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 import study.Main;
 import study.model.UserDTO;
 import study.model.UserVO;
 
 import javax.annotation.PostConstruct;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.InputStream;
-import java.io.PrintWriter;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.StandardOpenOption;
 import java.util.*;
 import java.util.stream.Collectors;
 
 /**
  * 동일한 유형의 Bean이 2개 이상 존재할시 이름을 명시적으로 작성해준다.
- * 여기서는 UserDao를 구현하는 클래스가 2개이기 때문에 명시적으로 작성해준다.
+ * 이 프로젝트에서는 UserDao를 구현하는 클래스가 2개이기 때문에 명시적으로 작성해준다.
  */
 @Component("userFileDao")
 // @Repository @Mapper
@@ -71,21 +71,77 @@ public class UserFileDao implements UserDao{
     @Override
     public UserDTO insertUser(UserVO vo) {
         if (this.findByName(vo.getName()) == null) {
-            try (FileWriter fw = new FileWriter(Main.class.getResource("/data/user.csv").toString())) {
+            ClassPathResource resource = new ClassPathResource("data/user.csv");
+            try {
                 StringJoiner joiner = new StringJoiner(",");
                 joiner.add(vo.getName());
                 joiner.add(String.valueOf(vo.getAge()));
                 joiner.add(vo.getPhone());
                 joiner.add(vo.getEmail());
-                fw.write(joiner.toString());
+
+                File file = resource.getFile();
+                Files.write(file.toPath(), ("\n" + joiner).getBytes(), StandardOpenOption.APPEND);
                 this.dataMap.put(vo.getName(), vo);
             } catch (Exception e) {
                 throw new RuntimeException(e.getMessage());
             }
-
             return vo.toDTO();
         } else {
             throw new RuntimeException("duplicated key");
         }
+    }
+
+    @Override
+    public String deleteUser(String name) throws Exception {
+        if (this.dataMap.containsKey(name)) {
+            ClassPathResource resource = new ClassPathResource("data/user.csv");
+            File file = resource.getFile();
+            try {
+                this.dataMap.remove(name);
+                StringJoiner lineJoiner = new StringJoiner("\n");
+                for (var entry : dataMap.entrySet()) {
+                    StringJoiner joiner = new StringJoiner(",");
+                    UserVO value = entry.getValue();
+                    joiner.add(value.getName());
+                    joiner.add(String.valueOf(value.getAge()));
+                    joiner.add(value.getPhone());
+                    joiner.add(value.getEmail());
+                    lineJoiner.merge(joiner);
+                }
+                Files.write(file.toPath(), lineJoiner.toString().getBytes(), StandardOpenOption.WRITE);
+            } catch (Exception e) {
+                throw new RuntimeException(e.getMessage());
+            }
+            return name;
+        } else {
+            throw new RuntimeException("no user to delete");
+        }
+    }
+
+    @Override
+    public UserDTO updateUser(UserVO vo) throws Exception {
+        if (this.findByName(vo.getName()) != null) {
+            ClassPathResource resource = new ClassPathResource("data/user.csv");
+            File file = resource.getFile();
+            try {
+                this.dataMap.put(vo.getName(), vo);
+                StringJoiner lineJoiner = new StringJoiner("\n");
+                for (var entry : dataMap.entrySet()) {
+                    StringJoiner joiner = new StringJoiner(",");
+                    UserVO value = entry.getValue();
+                    joiner.add(value.getName());
+                    joiner.add(String.valueOf(value.getAge()));
+                    joiner.add(value.getPhone());
+                    joiner.add(value.getEmail());
+                    lineJoiner.merge(joiner);
+                }
+                Files.write(file.toPath(), lineJoiner.toString().getBytes(), StandardOpenOption.WRITE);
+            } catch (Exception e) {
+                throw new RuntimeException(e.getMessage());
+            }
+        } else {
+            throw new RuntimeException("duplicated key");
+        }
+        return vo.toDTO();
     }
 }

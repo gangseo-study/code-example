@@ -14,4 +14,8 @@ public interface UserDao {
     List<UserVO> findByEmailContains(String email);
 
     UserDTO insertUser(UserVO toVO) throws Exception;
+
+    String deleteUser(String name) throws Exception;
+
+    UserDTO updateUser(UserVO dto) throws Exception;
 }

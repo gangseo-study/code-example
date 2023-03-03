@@ -35,4 +35,12 @@ public class UserService {
     public UserDTO insertUser(UserDTO dto) throws Exception {
         return userDao.insertUser(dto.toVO());
     }
+
+    public String deleteUser(String name) throws Exception {
+        return userDao.deleteUser(name);
+    }
+
+    public UserDTO updateUser(UserDTO dto) throws Exception {
+        return userDao.updateUser(dto.toVO());
+    }
 }
