@@ -20,15 +20,15 @@ public class AdviceCalcService {
     }
 
     public BigDecimal getPIValue(Long decimal) {
-        BigDecimal PI = BigDecimal.valueOf(0);
+        BigDecimal pi = BigDecimal.valueOf(0);
         for (long i = decimal; i > 0; i--) {
-            PI = PI.add(BigDecimal.valueOf(Math.pow(-1, i + 1) / (2 * i - 1)));
+            pi = pi.add(BigDecimal.valueOf(Math.pow(-1, i + 1) / (2 * i - 1)));
             if (i == 1) {
-                PI = PI.multiply(BigDecimal.valueOf(4));
+                pi = pi.multiply(BigDecimal.valueOf(4));
                 break;
             }
         }
-        return PI;
+        return pi;
     }
 
 }

@@ -14,6 +14,7 @@ import java.util.Map;
 /**
  * - @Aspect: 클래스가 횡단 관심 (부가 기능) 클래스임을 명시한다.
  * - @Order: 실행 순서를 정의한다.
+ * - Advisor: 하나 이상의 Pointcut과 Advice를 가지는 것
  */
 @Aspect
 @Order(2)
