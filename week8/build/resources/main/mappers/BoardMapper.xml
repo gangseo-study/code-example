@@ -6,4 +6,8 @@
     <select id="findAll" resultType="com.example.aop.model.Board">
         SELECT * FROM board;
     </select>
+
+    <insert id="insertBoard">
+        INSERT INTO board(user_id, title) values (#{userId}, #{title})
+    </insert>
 </mapper>

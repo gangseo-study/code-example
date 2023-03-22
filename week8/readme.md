@@ -38,7 +38,6 @@ public class Main {
 public class SimplePojo implements Pojo {
 
     public void foo() {
-        // this works, but... gah!
         ((Pojo) AopContext.currentProxy()).bar();
     }
 
@@ -60,6 +59,10 @@ public class SimplePojo implements Pojo {
    - spring boot 기본값
    
 
+- Proxy는 Target 객체를 호출하는 과정에서만 생성되며, Target 객체의 메서드가 자기 자신의 다른 메서드를
+호출할 때는 생성되지 않는다. 
+  - 따라서 Advice가 걸려있는 메서드가 자기 자신의 객체의 다른 메서드에서 호출된다면 적용되지 않는다.
+
 -----------
 
 ## Transaction
@@ -79,3 +82,27 @@ public class SimplePojo implements Pojo {
 
 - Durability(지속성)
   - 트랜잭션이 성공적으로 완료되었을 경우, 결과는 영구적으로 반영되어야 한다.
+
+
+JDBC 트랜잭션 예제
+```java
+Connection connection = dataSource.getConnection(); // 커넥션 생성
+try (connection) { 
+        connection.setAutoCommit(false);
+        
+        // 로직....
+        connection.commit(); // 정상 완료, commit
+} catch (SQLException e) { 
+        connection.rollback(); // 문제 발생, rollback
+}
+```
+
+
+
+### @Transactional
+![](https://docs.spring.io/spring-framework/docs/4.2.x/spring-framework-reference/html/images/tx.png)
+@Transactional 어노테이션 적용시 AOP 프록시에 Transaction Advisor가 얹혀서 나온다.
+
+
+- @Transactional은 모든 예외에서 rollback 처리??
+  - unchecked exception에서만 rollback 처리 (defalult)
