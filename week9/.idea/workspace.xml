@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2668c189-bca7-49f0-ae27-a20374de0344" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/aop/config/WebMcvConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/aop/config/interceptor/InterceptorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/aop/config/interceptor/InterceptorTest2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.gradle/7.6.1/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.gradle/7.6.1/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.gradle/7.6.1/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.gradle/7.6.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.gradle/7.6.1/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.gradle/7.6.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.gradle/7.6.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.gradle/7.6.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.gradle/7.6.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.gradle/7.6.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.gradle/7.6.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.gradle/file-system.probe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/modules/aop.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/sonarlint/issuestore/3/a/3a8040d81ee15677da5dac7ede732498faa504b2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/sonarlint/issuestore/5/e/5e69f08ec4ca102b0e7bc86c77a226c3847c602b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/sonarlint/issuestore/8/1/81a6802d454681edfece9a5c937786dfc6fe47c6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/sonarlint/issuestore/b/1/b144619a06d7f17523a7e2f51a115e17ec0ee045" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/sonarlint/issuestore/b/b/bbde82a47786b7185697f518fc3256c6ca8482a9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/sonarlint/issuestore/e/8/e8078bf80add3a8c0c85ddb3fbe331a068389305" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/sonarlint/issuestore/f/2/f2e5083a116172cd04a64d0874b465303449edae" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/sonarlint/securityhotspotstore/3/a/3a8040d81ee15677da5dac7ede732498faa504b2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/sonarlint/securityhotspotstore/5/e/5e69f08ec4ca102b0e7bc86c77a226c3847c602b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/sonarlint/securityhotspotstore/8/1/81a6802d454681edfece9a5c937786dfc6fe47c6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/sonarlint/securityhotspotstore/b/1/b144619a06d7f17523a7e2f51a115e17ec0ee045" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/sonarlint/securityhotspotstore/b/b/bbde82a47786b7185697f518fc3256c6ca8482a9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/sonarlint/securityhotspotstore/e/8/e8078bf80add3a8c0c85ddb3fbe331a068389305" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/sonarlint/securityhotspotstore/f/0/f07866736216be0ee2aba49e392191aeae700a35" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/sonarlint/securityhotspotstore/f/2/f2e5083a116172cd04a64d0874b465303449edae" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/build/classes/java/main/com/example/aop/AopApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/build/classes/java/main/com/example/aop/common/advice/MathCalcAop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/build/classes/java/main/com/example/aop/common/advice/StopWatchAop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/build/classes/java/main/com/example/aop/common/annotation/StopWatchAnnotation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/build/classes/java/main/com/example/aop/config/SwaggerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/build/classes/java/main/com/example/aop/controller/AdviceCalcController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/build/classes/java/main/com/example/aop/controller/BoardController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/build/classes/java/main/com/example/aop/controller/CalcController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/build/classes/java/main/com/example/aop/mapper/BoardMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/build/classes/java/main/com/example/aop/model/Board.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/build/classes/java/main/com/example/aop/service/AdviceCalcService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/build/classes/java/main/com/example/aop/service/BoardService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/build/classes/java/main/com/example/aop/service/CalcService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/build/resources/main/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/build/resources/main/mappers/BoardMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/build/tmp/compileJava/compileTransaction/stash-dir/BoardController.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/build/tmp/compileJava/compileTransaction/stash-dir/BoardService.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/src/main/java/com/example/aop/AopApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/src/main/java/com/example/aop/common/advice/MathCalcAop.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/src/main/java/com/example/aop/common/advice/StopWatchAop.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/src/main/java/com/example/aop/common/annotation/StopWatchAnnotation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/src/main/java/com/example/aop/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/src/main/java/com/example/aop/controller/AdviceCalcController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/src/main/java/com/example/aop/controller/BoardController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/src/main/java/com/example/aop/controller/CalcController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/src/main/java/com/example/aop/mapper/BoardMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/src/main/java/com/example/aop/model/Board.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/src/main/java/com/example/aop/service/AdviceCalcService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/src/main/java/com/example/aop/service/BoardService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/src/main/java/com/example/aop/service/CalcService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/src/main/resources/mappers/BoardMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week8/src/test/java/com/example/aop/AopApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="aop" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NMr9bZYhmESPpH4XGDhmExJUYL" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/leesanghyeon/Desktop/Development/Study/Personal/Spring/gangseo-study/9주차/code-example/week9",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "spring.configuration.checksum": "88c646fe6fc16cfbbd56ff8a295a3068",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.aop.config.interceptor" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="AopApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="com.example.aop.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.aop.AopApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2668c189-bca7-49f0-ae27-a20374de0344" name="Changes" comment="" />
+      <created>1679484642073</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679484642073</updated>
+      <workItem from="1679484643253" duration="745000" />
+      <workItem from="1679720364134" duration="3994000" />
+      <workItem from="1680002288550" duration="7752000" />
+      <workItem from="1680096455468" duration="3514000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
